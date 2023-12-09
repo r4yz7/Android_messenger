@@ -14,6 +14,11 @@ class MainActivity : AppCompatActivity() {
             if (!isLogin()){
                 buttonClickLogin(null);
             }
+            else{
+                val intent = Intent(this,ChatActivity::class.java);
+                startActivity(intent);
+                finish();
+            }
         },3000);
 
 
@@ -31,6 +36,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun isLogin():Boolean{
-        return false;
+        return true;
     }
 }
